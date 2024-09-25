@@ -112,7 +112,8 @@ class ToDoList{
     void handleTaskAddition(){
         cout << "Enter Task Name: " << "\n";
         string name ;
-        cin >>  name;
+        cin.ignore();
+        getline(cin, name);
         addTask(name);
         return;
     }
@@ -159,6 +160,7 @@ int main(){
         list.printMenu();
         choice = list.handleUserChoice();
     }
+    cout << "Exiting program...\n";
     return 0;
 
 }
